@@ -14,7 +14,6 @@ body{
     left: 2px;
 }
 
-
 .parent {
     height: 95%;
     display: grid;
@@ -60,7 +59,7 @@ tr:nth-child(even) {
     background-color: rgb(235, 235, 235);
 }
 
-#RodeKaart1{
+.RodeKaart{
     position: absolute;
     width: 100px;
     height: 150px;
@@ -68,90 +67,76 @@ tr:nth-child(even) {
     border-radius: 10px;
     color: white;
     border: black 1px solid;
+    text-align: center;
 }
 
-#RodeKaart2{ 
+#R1{
+    bottom: calc(240px);
+    left: calc(50% - 50px);
+}
+
+#R2{ 
+    bottom: calc(240px);
+    left: calc(50% - 160px);
+}
+
+#R3{
+    bottom: calc(240px);
+    left: calc(50% + 60px);
+}
+
+.WitteKaart{
     position: absolute;
     width: 100px;
     height: 150px;
-    background-color: red;
     border-radius: 10px;
+    color: red;
+    border: black 1px solid;
+    text-align: center;
+}
+
+#w1{
+    bottom: calc(240px);
+    left: calc(50% - 215px);
+}
+
+#w2{
+    bottom: calc(240px);
+    left: calc(50% - 105px);
+}
+
+#w3{
+    bottom: calc(240px);
+    left: calc(50% + 5px);
+}
+
+#w4{
+    bottom: calc(240px);
+    left: calc(50% + 115px);
+}
+
+#whiteplaybutton{
+    background-color: #e7e7e7; 
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: absolute;
+    bottom: calc(275px);
+    left: calc(50% + 220px);
+}
+
+#redplaybutton{
+    background-color: #f44336; /* Green */
+    border: none;
     color: white;
-    border: black 1px solid;
-}
-
-#RodeKaart3{
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
     position: absolute;
-    width: 100px;
-    height: 150px;
-    background-color: red;
-    border-radius: 10px;
-    color: white;
-    border: black 1px solid;
-}
-
-#witteKaart1{
-    position: absolute;
-    top: 50px;
-    left: calc(50% - 100px);
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    color: red;
-    border: black 1px solid;
-}
-
-#witteKaart2{
-    position: absolute;
-    top: 50px;
-    left: calc(50%);
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    color: red;
-    border: black 1px solid;
-}
-
-#witteKaart3{
-    position: absolute;
-    top: 50px;
-    left: 960px;
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    color: red;
-    border: black 1px solid;
-}
-
-#witteKaart4{
-    position: absolute;
-    top: 50px;
-    left: 960px;
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    color: red;
-    border: black 1px solid;
-}
-
-#witteKaart5{
-    position: absolute;
-    top: 50px;
-    left: 960px;
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    color: red;
-    border: black 1px solid;
-}
-
-#witteKaart6{
-    position: absolute;
-    top: 50px;
-    left: 960px;
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    color: red;
-    border: black 1px solid;
+    bottom: calc(275px);
+    left: calc(50% + 165px);
 }

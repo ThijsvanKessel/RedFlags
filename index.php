@@ -11,6 +11,7 @@
 <header id="header">
     <div id="HeaderButton">
         <button id="leaveGame">Leave Game</button>
+        <button id="ShowPlayedCard">Played Card</button>
     </div>
 </header>
 
@@ -18,25 +19,25 @@
     <div class="parent">
         <div class="div1">
             <div id="w1" class="WitteKaart">
-                <a>Default Text</a>
+                <a id="w1-text">Default Text</a>
             </div>
             <div id="w2" class="WitteKaart">
-                <a>Default Text</a>
+                <a id="w2-text">Default Text</a>
             </div>
             <div id="w3" class="WitteKaart">
-                <a>Default Text</a>
+                <a id="w3-text">Default Text</a>
             </div>
             <div id="w4" class="WitteKaart">
-                <a>Default Text</a>
+                <a id="w4-text">Default Text</a>
             </div>
             <div id="R1" class="RodeKaart">
-                <a>Default Text</a>
+                <a id="R1-text">Default Text</a>
             </div>
             <div id="R2" class="RodeKaart">
-                <a>Default Text</a>
+                <a id="R2-text">Default Text</a>
             </div>
             <div id="R3" class="RodeKaart">
-                <a>Default Text</a>
+                <a id="R3-text">Default Text</a>
             </div>
             <button id="whiteplaybutton">play white cards</button>
             <button id="redplaybutton">play red card</button>
@@ -81,7 +82,7 @@
     </div>
 
     <!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <!-- Custom js  -->
     <script src="js/main.js"></script>

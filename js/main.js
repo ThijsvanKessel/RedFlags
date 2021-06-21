@@ -6,9 +6,14 @@ selectedCard2,
 selectedCard3;
 
 $(document).ready(function(){
-    WhiteCards();
     document.getElementById("whiteplaybutton").hidden = true;
     document.getElementById("redplaybutton").hidden = true;
+    WhiteCards();
+    showWhiteCard("w1", Math.floor(Math.random() * 100) + 1);
+    showWhiteCard("w2", Math.floor(Math.random() * 100) + 1);
+    showWhiteCard("w3", Math.floor(Math.random() * 100) + 1);
+    showWhiteCard("w4", Math.floor(Math.random() * 100) + 1);
+    
 });
 
 $(".WitteKaart").on("click", function(){
@@ -26,7 +31,6 @@ $(".WitteKaart").on("click", function(){
         whitecardCounter++;
         document.getElementById("whiteplaybutton").hidden = false;    
     }
-
 })
 
 $(".RodeKaart").on("click", function(){
@@ -56,6 +60,9 @@ $("#leaveGame").on("click", function(){
     location.reload();
 })
 
+$("#ShowPlayedCard").on("click", function(){
+
+})
 
 function RedCards()
 {
@@ -66,6 +73,9 @@ function RedCards()
     document.getElementById("R1").hidden = false;
     document.getElementById("R2").hidden = false;
     document.getElementById("R3").hidden = false;
+    showRedCard("R1", Math.floor(Math.random() * 100) + 1);
+    showRedCard("R2", Math.floor(Math.random() * 100) + 1);
+    showRedCard("R3", Math.floor(Math.random() * 100) + 1);
 }
 
 function WhiteCards()
@@ -88,4 +98,28 @@ function NoCards()
     document.getElementById("R1").hidden = true;
     document.getElementById("R2").hidden = true;
     document.getElementById("R3").hidden = true;
+}
+
+function showWhiteCard(element, CardID) {
+  var xhttp;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById(element).innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "inc/connect.php?q="+CardID, true);
+  xhttp.send();
+  }
+
+function showRedCard(element, CardID) {
+  var xhttp;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById(element).innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "inc/connect2.php?q="+CardID, true);
+  xhttp.send();
 }

@@ -6,16 +6,17 @@ selectedCard2,
 selectedCard3,
 distanceLeftWhite = 0,
 playedWhiteCounter = 0,
-distanceLeftRed = 55;
+distanceLeftRed = 55,
+playedRedCounter = 0;
 
 $(document).ready(function(){
     document.getElementById("whiteplaybutton").hidden = true;
     document.getElementById("redplaybutton").hidden = true;
     WhiteCards();
-    showWhiteCard("w1", Math.floor(Math.random() * 100) + 1);
-    showWhiteCard("w2", Math.floor(Math.random() * 100) + 1);
-    showWhiteCard("w3", Math.floor(Math.random() * 100) + 1);
-    showWhiteCard("w4", Math.floor(Math.random() * 100) + 1);
+    showWhiteCard("w1", Math.floor(Math.random() * 210) + 1);
+    showWhiteCard("w2", Math.floor(Math.random() * 210) + 1);
+    showWhiteCard("w3", Math.floor(Math.random() * 210) + 1);
+    showWhiteCard("w4", Math.floor(Math.random() * 210) + 1);
     
 });
 
@@ -64,12 +65,16 @@ $("#leaveGame").on("click", function(){
 })
 
 $("#ShowPlayedCard").on("click", function(){
-  document.getElementById("GespeeldeKaarten").innerHTML = document.getElementById("GespeeldeKaarten").innerHTML+'<div class="GespeeldeKaart" style="left : '+distanceLeftWhite+'px"><a id="w1-text">Default Text</a></div>';
+  playedWhiteCounter++;
+  document.getElementById("GespeeldeKaarten").innerHTML = document.getElementById("GespeeldeKaarten").innerHTML+'<div class="GespeeldeKaart" id="PlayWhite'+playedWhiteCounter+'" style="left : '+distanceLeftWhite+'px"><a id="w1-text">Default Text</a></div>';
+  showWhiteCard("PlayWhite"+playedWhiteCounter, Math.floor(Math.random() * 210) + 1);
   distanceLeftWhite = distanceLeftWhite + 110;
 })
 
 $("#ShowPlayedCardRed").on("click", function(){
-  document.getElementById("GespeeldeKaarten").innerHTML = document.getElementById("GespeeldeKaarten").innerHTML+'<div class="GespeeldeKaartRood" style="left : '+distanceLeftRed+'px"><a id="w1-text">Default Text</a></div>';
+  playedRedCounter++;
+  document.getElementById("GespeeldeKaarten").innerHTML = document.getElementById("GespeeldeKaarten").innerHTML+'<div class="GespeeldeKaartRood" id="PlayRed'+playedRedCounter+'" style="left : '+distanceLeftRed+'px"><a id="w1-text">Default Text</a></div>';
+  showRedCard("PlayRed"+playedRedCounter, Math.floor(Math.random() * 250) + 1);
   distanceLeftRed = distanceLeftRed + 220;
 })
 
@@ -82,9 +87,9 @@ function RedCards()
     document.getElementById("R1").hidden = false;
     document.getElementById("R2").hidden = false;
     document.getElementById("R3").hidden = false;
-    showRedCard("R1", Math.floor(Math.random() * 100) + 1);
-    showRedCard("R2", Math.floor(Math.random() * 100) + 1);
-    showRedCard("R3", Math.floor(Math.random() * 100) + 1);
+    showRedCard("R1", Math.floor(Math.random() * 250) + 1);
+    showRedCard("R2", Math.floor(Math.random() * 250) + 1);
+    showRedCard("R3", Math.floor(Math.random() * 250) + 1);
 }
 
 function WhiteCards()

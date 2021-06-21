@@ -3,7 +3,10 @@ whitecardCounter = 0,
 redcardCounter = 0,
 selectedCard1,
 selectedCard2,
-selectedCard3;
+selectedCard3,
+distanceLeftWhite = 0,
+playedWhiteCounter = 0,
+distanceLeftRed = 55;
 
 $(document).ready(function(){
     document.getElementById("whiteplaybutton").hidden = true;
@@ -61,7 +64,13 @@ $("#leaveGame").on("click", function(){
 })
 
 $("#ShowPlayedCard").on("click", function(){
+  document.getElementById("GespeeldeKaarten").innerHTML = document.getElementById("GespeeldeKaarten").innerHTML+'<div class="GespeeldeKaart" style="left : '+distanceLeftWhite+'px"><a id="w1-text">Default Text</a></div>';
+  distanceLeftWhite = distanceLeftWhite + 110;
+})
 
+$("#ShowPlayedCardRed").on("click", function(){
+  document.getElementById("GespeeldeKaarten").innerHTML = document.getElementById("GespeeldeKaarten").innerHTML+'<div class="GespeeldeKaartRood" style="left : '+distanceLeftRed+'px"><a id="w1-text">Default Text</a></div>';
+  distanceLeftRed = distanceLeftRed + 220;
 })
 
 function RedCards()

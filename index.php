@@ -12,35 +12,40 @@
     <div id="HeaderButton">
         <button id="leaveGame">Leave Game</button>
         <button id="ShowPlayedCard">Played Card</button>
+        <button id="ShowPlayedCardRed">Played Card</button>
     </div>
 </header>
 
 <body>
     <div class="parent">
         <div class="div1">
-            <div id="w1" class="WitteKaart">
-                <a id="w1-text">Default Text</a>
+            <div id="GespeeldeKaarten">
             </div>
-            <div id="w2" class="WitteKaart">
-                <a id="w2-text">Default Text</a>
+            <div id="KaartenSpeler">
+                <div id="w1" class="WitteKaart">
+                    <a id="w1-text">Default Text</a>
+                </div>
+                <div id="w2" class="WitteKaart">
+                    <a id="w2-text">Default Text</a>
+                </div>
+                <div id="w3" class="WitteKaart">
+                    <a id="w3-text">Default Text</a>
+                </div>
+                <div id="w4" class="WitteKaart">
+                    <a id="w4-text">Default Text</a>
+                </div>
+                <div id="R1" class="RodeKaart">
+                    <a id="R1-text">Default Text</a>
+                </div>
+                <div id="R2" class="RodeKaart">
+                    <a id="R2-text">Default Text</a>
+                </div>
+                <div id="R3" class="RodeKaart">
+                    <a id="R3-text">Default Text</a>
+                </div>
+                <button id="whiteplaybutton">play white cards</button>
+                <button id="redplaybutton">play red card</button>
             </div>
-            <div id="w3" class="WitteKaart">
-                <a id="w3-text">Default Text</a>
-            </div>
-            <div id="w4" class="WitteKaart">
-                <a id="w4-text">Default Text</a>
-            </div>
-            <div id="R1" class="RodeKaart">
-                <a id="R1-text">Default Text</a>
-            </div>
-            <div id="R2" class="RodeKaart">
-                <a id="R2-text">Default Text</a>
-            </div>
-            <div id="R3" class="RodeKaart">
-                <a id="R3-text">Default Text</a>
-            </div>
-            <button id="whiteplaybutton">play white cards</button>
-            <button id="redplaybutton">play red card</button>
         </div>
 
         <div class="div2">
